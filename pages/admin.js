@@ -4,7 +4,7 @@ import AdminPage from '../components/AdminPage';
 const Admin = () => {
   return (
     <div>
-      <h1>Admin Page</h1>
+      <h1>Admin Dashboard</h1>
       <AdminPage />
     </div>
   );
