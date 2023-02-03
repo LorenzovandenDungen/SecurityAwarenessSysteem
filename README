@@ -1,0 +1,30 @@
+Moet gemaakt worden in: React / NextJS
+
+Security Awareness Systeem
+
+(Dingen die tussen haakjes staan zijn niet wijzigbaar maar worden gereflecteerd in de DOM)
+
+Omschrijving: op dit systeem moet kunnen worden ingelogd vanuit een invite code of een e-mail
+
+
+Backend:
+- Admin gedeelte heeft: Users & Invites, Trainings
+
+(Admin)
+-> Admin Login pagina
+-> Users: kan gebruikers handmatig aanmaken (Naam, E-mail, Functie) of via een .csv een bulk gebruikers te importeren
+-> Users: moet een knopje zijn om per individuele users een invite te sturen voor een specific 'Training ID' welk per mail verstuurd zal worden (dit moet ook voor meerdere tegelijk mogelijk zijn, bijv door meerdere users te selecteren via een checkbox), bij het invite knop zit een default tijd dat deze invite geldig is (hergebruikt kan worden indien het quiz nog niet is afgerond) 
+-> Users: Rechten / Rol aanpassen van de user (Admin, Employee, Company)
+
+-> Trainings: in dit pagina kunnen trainingen gemaakt worden (soort quiz), na het aanmaken kunnen ze nog bijgewerkt / geupdate worden met nieuwe text, antwoorden of fotos (Bij trainingen moet je denken aan soort van examens). elke training kan meerdere vragen hebben (beetje kahoot achtig) in zo een training zet ik meestal resultaten van een eerder uitgevoerde test bijvoorbeeld een phishing campagne (Wanneer ik een bedrijf phishing e-mails heb gestuurd) dan zou ik in deze training fotos kunnen laten zien van de phishing pagina en dan zou een van de antwoorden bijv kunnen zijn 'De webpagina eindigd niet op .nl maar op .co.nl' 
+-> Trainings: na het aanmaken van de training komt er een lijst te staan met 'Training ID's' en een knopje daar naast om deze te bewerken of verwijderen, deze ID's kunnen geselecteerd worden in de Users sectie om de gebruikers een invite code te sturen voor het relevante training.
+
+(Employee)
+-> Login Pagina: vult invite code waarna er staat 'Invalid Code' en indien geldig wordt die code geactiveerd en is die geldig voor de opgegeven deadline (de personen die de training afnemen kunnen de training dan doen wanneer ze willen en verder gaan wanneer het hun uitkomt)
+-> Available Trainings: zien de training en de deadline
+-> My Grades: kunnen de verleden zien van trainingen 2021,2022,2023 per poging en het relevante score en naam van welk manager deze heeft goedgekeurd of afgekeurd.
+
+(Company) 
+-> Manager Login Pagina
+-> My Grades: kan hierin de huidige Namen zien van de deelnemers over verschillende jaren, pogingen en het relevante score maar kan ook zien hoe ver ze zijn met het invullen van de training en wat de score is van ingestuurde trainings en kan ook kiezen om een herexamen te laten doen door de employee (employee krijgt dan een e-mail met dat zijn score onvoldoende was en dat hij de test opnieuw moet doen)
+-> Config: kan kiezen om automatisch bij een onvoldoende de e-mail te laten sturen
